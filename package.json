@@ -1,0 +1,24 @@
+{
+  "name": "voice-for-the-innocent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "googlemaps": "^1.12.0",
+    "json-file": "^0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CincyTechies4Good/VoiceForTheInnocent.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CincyTechies4Good/VoiceForTheInnocent/issues"
+  },
+  "homepage": "https://github.com/CincyTechies4Good/VoiceForTheInnocent#readme"
+}
