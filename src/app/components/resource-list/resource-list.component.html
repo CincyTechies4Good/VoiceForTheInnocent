@@ -3,7 +3,6 @@
       <thead>
         <tr>
           <th><input type="text" name="name" [(ngModel)]="filter.name" placeholder="Name"></th>
-          <th><input type="text" name="website" [(ngModel)]="filter.website" placeholder="Website"></th>
           <th><input type="text" name="phone" [(ngModel)]="filter.phone" placeholder="Phone"></th>
           <th><input type="text" name="city" [(ngModel)]="filter.city" placeholder="City"></th>
           <th><input type="text" name="state" [(ngModel)]="filter.state" placeholder="State"></th>
@@ -12,8 +11,12 @@
 
       <tbody>
         <tr *ngFor="let resource of resources | resourcefilter:filter | slice:(page-1)*limit:page*limit">
-            <td>{{resource.name}}</td>
-            <td>{{resource.website}}</td>
+            <td>
+              <a *ngIf="resource.website; else elseBlock" [href]="resource.website">{{resource.name}}</a>
+              <ng-template #elseBlock>
+                {{resource.name}}
+              </ng-template>
+            </td>
             <td>{{resource.phone}}</td>
             <td>{{resource.city}}</td>
             <td>{{resource.state}}</td>
