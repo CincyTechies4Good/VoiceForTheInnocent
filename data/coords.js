@@ -1,3 +1,11 @@
+/*
+  this is meant to be manually run from a command line
+  need to set environment variable GOOGLE_MAPS_API_KEY to valid api key
+  then run:
+    node data/coords.js
+*/
+
+
 const json = require('json-file');
 const GoogleMapsAPI = require('googlemaps')
 
@@ -26,7 +34,7 @@ function geocode(site) {
   });
 }
 
-let file = json.read('crisis-centers.json')
+let file = json.read('./data/crisis-centers.json')
 console.log("read in", file.data.length, "sites")
 file.data.forEach(a => {
    geocode(a);
