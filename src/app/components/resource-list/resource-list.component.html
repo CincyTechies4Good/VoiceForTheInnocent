@@ -1,0 +1,23 @@
+<form>
+    <table>
+      <thead>
+        <tr>
+          <th><input type="text" name="name" [(ngModel)]="filter.name" placeholder="Name"></th>
+          <th><input type="text" name="website" [(ngModel)]="filter.website" placeholder="Website"></th>
+          <th><input type="text" name="phone" [(ngModel)]="filter.phone" placeholder="Phone"></th>
+          <th><input type="text" name="city" [(ngModel)]="filter.city" placeholder="City"></th>
+          <th><input type="text" name="state" [(ngModel)]="filter.state" placeholder="State"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let resource of resources | resourcefilter:filter | slice:(page-1)*limit:page*limit">
+            <td>{{resource.name}}</td>
+            <td>{{resource.website}}</td>
+            <td>{{resource.phone}}</td>
+            <td>{{resource.city}}</td>
+            <td>{{resource.state}}</td>
+        </tr>
+      </tbody>
+    </table>
+</form>
