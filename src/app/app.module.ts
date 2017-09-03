@@ -14,17 +14,21 @@ import { ResourceListComponent } from './components/resource-list/resource-list.
 /* Services */
 import { DataService } from './services/data.service';
 
+/* App Routing */
+import { appRoutingComponents, AppRoutingModule } from './app-routing.module';
+
 @NgModule({
   declarations: [
     AppComponent,
     ResourceComponent,
-    ResourceListComponent,
-    ResourceFilterPipe
+    ResourceFilterPipe,
+    appRoutingComponents
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
