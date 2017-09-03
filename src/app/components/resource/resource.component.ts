@@ -6,7 +6,7 @@ import { ResourceFilterPipe } from '../../pipes/resource-filter.pipe';
 @Component({
   selector: 'app-resource',
   templateUrl: './resource.component.html',
-  styleUrls: ['./resource.component.css']
+  styleUrls: ['./resource.component.scss']
 })
 export class ResourceComponent implements OnInit {
   @Input('resource') resource:Resource;

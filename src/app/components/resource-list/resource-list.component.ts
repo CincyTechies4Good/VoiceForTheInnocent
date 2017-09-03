@@ -7,7 +7,7 @@ import 'rxjs/add/operator/min';
 @Component({
   selector: 'app-resource-list',
   templateUrl: './resource-list.component.html',
-  styleUrls: ['./resource-list.component.css']
+  styleUrls: ['./resource-list.component.scss']
 })
 export class ResourceListComponent implements OnInit {
   numberOfResources: number;
