@@ -15,7 +15,8 @@ export class DataService {
    * 
    * @return {Observable<Resource[]>} A list of resources.
    */
-  getResources(): Observable<Resource[]> {
+  get resources(): Observable<Resource[]> {
+    //converting to getter since it has no input
     return this.http.get('assets/data/resources.json')
       .map((res => res.json()))
       .catch((error: any) => {

@@ -19,7 +19,7 @@ export class ResourceListComponent implements OnInit {
   constructor(private dataService:DataService) { }
 
   ngOnInit() {    
-    this.dataService.getResources().subscribe(
+    this.dataService.resources.subscribe(
       (resources: Resource[]) => {
         this.resources = resources;
         this.numberOfResources = this.resources.length;

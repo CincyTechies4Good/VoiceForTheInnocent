@@ -8,6 +8,10 @@ export class Resource {
     phoneEmergency: string;
     phoneNonEmergency: string;
     email: string;
+    //temporary additions to match resources.json type
+    phone: string;
+    city: string;
+    state: string;
 }
 
 export class Address {
